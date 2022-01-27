@@ -1,0 +1,23 @@
+{
+    "name": "dillonsmart/libs",
+    "description": "Collection of PHP Libraries",
+    "type": "library",
+    "require": {
+
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dillonsmart\\Libs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dillon Smart",
+            "email": "dillonsmart00@gmail.com"
+        }
+    ],
+    "extra": {
+
+    }
+}
