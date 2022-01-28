@@ -5,15 +5,28 @@ namespace Dillonsmart\Libs;
 class Arr {
 
     /**
+     * Explodes a string
+     *
+     * @param $value
+     * @param string $delimiter
+     * @return false|string[]
+     */
+    public static function toArray($value, string $delimiter = ' ')
+    {
+        return explode($value, $delimiter);
+    }
+
+    /**
      * Pushes a new item to the given array
      *
      * @param $arr
      * @param $value
-     * @return int
      */
-    public static function push($arr, $value)
+    public static function push($arr, $value): int
     {
-        return array_push($arr, $value);
+        $arr[] = $value;
+
+        return $arr;
     }
 
     /**
@@ -21,26 +34,30 @@ class Arr {
      * By default, the first index of the array is spliced.
      *
      * @param $arr
-     * @param $offset Defaults is 0
-     * @param $length Default is 1
+     * @param int $offset
+     * @param int $length
      * @return array
      */
-    public static function splice($arr, $offset = 0, $length = 1)
+    public static function splice($arr, int $offset = 0, int $length = 1): array
     {
-        return array_splice($array, $offset, $length);
+        array_splice($arr, $offset, $length);
+
+        return $arr;
     }
 
     /**
      * Splice the given array from the end.
-     * By default, the last index will be remvoed.
+     * By default, the last index will be removed.
      *
      * @param $arr
-     * @param $length
-     * @return mixed
+     * @param int $length
+     * @return array
      */
-    public static function splice_end($arr, $length = 1)
+    public static function spliceEnd($arr, int $length = 1): array
     {
-        return array_splace($arr, sizeof($arr) - $length, $length);
+        array_splice($arr, sizeof($arr) - $length, $length);
+
+        return $arr;
     }
 
 }
