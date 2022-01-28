@@ -1,9 +1,9 @@
 {
     "name": "dillonsmart/helpers",
-    "description": "Collection of PHP Libraries",
+    "description": "A collection of PHP Helpers",
     "type": "library",
     "require": {
-
+        "php": ">=7.4"
     },
     "license": "MIT",
     "autoload": {
