@@ -19,60 +19,60 @@ class Str {
     }
 
     /**
-     * Capitalize the first letter of the value
+     * Capitalize the first letter of the string
      *
-     * @param $value
+     * @param $string
      * @return string
      */
-    public static function capitalize($value): string
+    public static function capitalize($string): string
     {
-        return ucfirst(strtolower($value));
+        return ucfirst(strtolower($string));
     }
 
     /**
-     * Transforms the value to uppercase
+     * Transforms the string to uppercase
      *
-     * @param $value
+     * @param $string
      * @return string
      */
-    public static function upper($value): string
+    public static function upper($string): string
     {
-        return strtoupper($value);
+        return strtoupper($string);
     }
 
     /**
-     * Transforms the value to lowercase
+     * Transforms the string to lowercase
      *
-     * @param $value
+     * @param $string
      * @return string
      */
-    public static function lower($value): string
+    public static function lower($string): string
     {
-        return strtolower($value);
+        return strtolower($string);
     }
 
     /**
      * Adds padding to the left of the string
      *
-     * @param $value
+     * @param $string
      * @param string $padding
      * @return string
      */
-    public static function paddingLeft($value, string $padding = ' '): string
+    public static function paddingLeft($string, string $padding = ' '): string
     {
-        return $padding . $value;
+        return $padding . $string;
     }
 
     /**
      * Adds padding to the right of the string
      *
-     * @param $value
+     * @param $string
      * @param string $padding
      * @return string
      */
-    public static function paddingRight($value, string $padding = ' '): string
+    public static function paddingRight($string, string $padding = ' '): string
     {
-        return $value . $padding;
+        return $string . $padding;
     }
 
     /**
@@ -120,13 +120,13 @@ class Str {
     /**
      * Limit the number of characters in a string
      *
-     * @param $value
+     * @param $string
      * @param $length
      * @return false|string
      */
-    public static function charTrim($value, $length)
+    public static function charTrim($string, $length)
     {
-        return substr($value, 0, $length);
+        return substr($string, 0, $length);
     }
 
     public static function replace($value, $string, $offset, $length)
@@ -227,7 +227,7 @@ class Str {
         return $string;
     }
 
-    public static function jumble($value)
+    public static function jumble($string)
     {
         // jumble the order of the words in a string
     }
