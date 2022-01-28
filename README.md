@@ -1,2 +1,2 @@
-# Libs
-### A collection of PHP Libraries 
+# PHP Helpers
+### A collection of PHP Helpers

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dillonsmart\Libs;
+namespace Dillonsmart\Helpers;
 
 class Obj {
 

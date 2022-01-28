@@ -1,5 +1,5 @@
 {
-    "name": "dillonsmart/libs",
+    "name": "dillonsmart/helpers",
     "description": "Collection of PHP Libraries",
     "type": "library",
     "require": {
@@ -8,7 +8,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Dillonsmart\\Libs\\": "src/"
+            "Dillonsmart\\Helpers\\": "src/"
         }
     },
     "authors": [

@@ -1,6 +1,8 @@
 <?php
 
-namespace Dillonsmart\Libs;
+namespace Dillonsmart\Helpers;
+
+use Exception;
 
 class Str {
 
@@ -127,7 +129,7 @@ class Str {
         return substr($value, 0, $length);
     }
 
-    public function replace($value, $string, $offset, $length)
+    public static function replace($value, $string, $offset, $length)
     {
         // replace all occurrences in a string
     }
@@ -205,9 +207,24 @@ class Str {
         }
     }
 
-    public static function random($length = 16)
+    /**
+     * Generates a random string
+     *
+     * @param int $length
+     * @return string
+     * @throws Exception
+     */
+    public static function random(int $length = 16): string
     {
-        // return a random string to length
+        $string = '';
+
+        while (strlen($string) < $length) {
+            $size = $length - strlen($string);
+            $bytes = random_bytes($size);
+            $string .= substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, $size);
+        }
+
+        return $string;
     }
 
     public static function jumble($value)
